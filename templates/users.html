@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Evo {% endblock %}</h1>
+    {% for user in users %}
+        <a href="#">
+            <h2>{{ user['name'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ user['content'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}

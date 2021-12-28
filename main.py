@@ -40,8 +40,14 @@ def create():
             flash('Name is required!')
         else:
             conn = get_db_connection()
-            conn.execute('INSERT INTO users (name) VALUES (?)',
-                         (name,))
+
+            users = conn.execute('SELECT * FROM users WHERE name = ?', (name,)).fetchall()
+            if users:
+                flash('Вже бачилися, ' + name, 'info')
+            else:
+                conn.execute('INSERT INTO users (name) VALUES (?)',
+                             (name,))
+                flash('Привіт, ' + name, 'info')
             conn.commit()
             conn.close()
             return redirect(url_for('index'))

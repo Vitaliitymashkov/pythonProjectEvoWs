@@ -12,7 +12,7 @@
 
 Якщо хочеться додати щось до цього завдання - не соромся проявити творчість.
 
+
 MANUAL
 
-1) python init_db.py
-2) 
+1) Use 'python init_db.py' to initialize DB

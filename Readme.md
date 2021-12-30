@@ -16,3 +16,17 @@
 MANUAL
 
 1) Use 'python init_db.py' to initialize DB
+
+
+DOCKER COMMANDS
+docker build -t evows .
+docker run -p 8080:8080 -name evows-container -d evows
+docker exec -it evows-container /bin/bash
+
+docker rm evows-container
+
++++
+docker-compose up
+
+https://medium.com/featurepreneur/how-to-deploy-docker-container-on-heroku-part-2-eaaaf1027f0b
+https://devcenter.heroku.com/articles/build-docker-images-heroku-yml

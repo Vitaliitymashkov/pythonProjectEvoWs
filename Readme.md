@@ -30,3 +30,15 @@ docker-compose up
 
 https://medium.com/featurepreneur/how-to-deploy-docker-container-on-heroku-part-2-eaaaf1027f0b
 https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
+
+----------------------
+heroku login
+* Login into Heroku Container
+heroku container:login
+* Create a new Heroku app and add the Existing local directory to Remote Heroku Repository
+heroku create <app-name>
+heroku git:remote -a <app-name>
+* Push and Release
+heroku container:push web --app <app-name>
+heroku container:release web --app <app-name>
+Open browser and Enter the URL https://<app-name>.herokuapp.com/

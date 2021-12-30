@@ -32,6 +32,8 @@ https://medium.com/featurepreneur/how-to-deploy-docker-container-on-heroku-part-
 https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
 
 ----------------------
+app-name = evows
+
 heroku login
 * Login into Heroku Container
 heroku container:login
@@ -42,3 +44,6 @@ heroku git:remote -a <app-name>
 heroku container:push web --app <app-name>
 heroku container:release web --app <app-name>
 Open browser and Enter the URL https://<app-name>.herokuapp.com/
+
+heroku open
+

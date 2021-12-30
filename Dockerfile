@@ -20,7 +20,7 @@ RUN pip install -r requirements.txt
 
 RUN python3 /app/init_db.py
 
-EXPOSE 8080
+EXPOSE ${PORT}
 
 # запускаем приложение Python
 CMD ["python3", "main.py"]

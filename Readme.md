@@ -1,4 +1,4 @@
-# Завдання №2
+# Завдання №2 - EVO WS
 
 ## Потрібно написати веб-сервіс. 
 На головній сторінці форма з полем введення імені та кнопкою "Привітатись". При натисканні на кнопку, якщо ім'я зустрілося вперше, виведи "Привіт, <Ім'я>". Якщо таке ім'я вже зустрічалося, виведи "Вже бачилися, ім'я".
@@ -13,37 +13,51 @@
 Якщо хочеться додати щось до цього завдання - не соромся проявити творчість.
 
 
-MANUAL
+### MANUAL
 
 1) Use 'python init_db.py' to initialize DB
 
 
-DOCKER COMMANDS
-docker build -t evows .
-docker run -p 8080:8080 -name evows-container -d evows
-docker exec -it evows-container /bin/bash
+## DOCKER COMMANDS
+    docker build -t evows .
+    docker run -p 8080:8080 -name evows-container -d evows
+    docker exec -it evows-container /bin/bash
 
-docker rm evows-container
+    docker rm evows-container
 
-+++
-docker-compose up
+## DOCKER-COMPOSE
+
+    docker-compose up
 
 https://medium.com/featurepreneur/how-to-deploy-docker-container-on-heroku-part-2-eaaaf1027f0b
+
 https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
 
 ----------------------
-app-name = evows
+## HEROKU
+    app-name = evows
 
-heroku login
+    heroku login
+
 * Login into Heroku Container
-heroku container:login
+
+
+    heroku container:login
+
 * Create a new Heroku app and add the Existing local directory to Remote Heroku Repository
-heroku create <app-name>
-heroku git:remote -a <app-name>
-* Push and Release
-heroku container:push web --app <app-name>
-heroku container:release web --app <app-name>
+
+
+    heroku create <app-name>
+    heroku git:remote -a <app-name>
+
+  * Push and Release
+
+
+    heroku container:push web --app <app-name>
+    heroku container:release web --app <app-name>
+
 Open browser and Enter the URL https://<app-name>.herokuapp.com/
 
-heroku open
+    
+    heroku open
 
